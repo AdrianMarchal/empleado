@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="GET">{% csrf_token %}
+        <input type="number" id="idEmpleado" name="idEmpleado" placeholder="Ingrese id aqui">
+        <button type="submit">Buscar</button>
+    </form>
+    <h1>Habilidades</h1>
+    <ul>
+        {% for habilidad in object_list %}
+            <li>{{ habilidad }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

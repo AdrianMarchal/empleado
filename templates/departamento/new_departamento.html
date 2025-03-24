@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Nuevo departamento</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <h3>Datos empleados</h3>
+        <p>Nombre: {{ form.nombre }}</p>
+        <p>Apellidos: {{ form.apellidos }}</p>
+
+        <h3>Datos Departamento</h3>
+        <p>Departamento: {{ form.departamento }}</p>
+        <p>Nombre corto del departamento: {{ form.shortname }}</p>
+
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
